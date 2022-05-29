@@ -1,26 +1,11 @@
-SELECT
-	st.name, 
-	st.surname, 
-	st.id, 
-	st.birthday, 
-	h.name, 
-	sth.finished_at,
-	(DATE_PART('year', CAST(CURRENT_DATE AS date)) - DATE_PART('year', st.birthday)) AS age
-FROM 
-	student st, 
-	student_hobby sth, 
-	hobby h,
-	(SELECT st.id
-	FROM student st, 
-	student_hobby sth, 
-	hobby h
-	WHERE st.id = sth.student_id 
-	 AND sth.hobby_id = h.id 
-	 AND sth.finished_at IS NULL
-	GROUP BY st.id) AS hobby_sum
-WHERE 
-	st.id = sth.student_id 
-	AND sth.hobby_id = h.id
-	AND (DATE_PART('year', CAST(CURRENT_DATE AS date)) - DATE_PART('year', st.birthday)) >= 19
-	AND sth.finished_at IS NULL
-	AND hobby_sum.id = st.id
+SELECT h.name, h.risk, EXTRACT(MONTH FROM age(NOW(),sth.started_at))
+FROM student st
+INNER JOIN 
+  (SELECT * FROM student_hobby sth
+     WHERE sth.finished_at IS NULL) sth
+ON st.id = sth.student_id
+INNER JOIN hobby h
+ON sth.hobby_id = h.id
+WHERE st.id = 11
+ORDER BY DATE_PART DESC
+LIMIT 1
