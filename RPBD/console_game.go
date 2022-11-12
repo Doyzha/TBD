@@ -131,3 +131,4 @@ func win_lose() {
 		syscall.Exit(0)
 	}
 }
+
