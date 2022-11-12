@@ -130,5 +130,4 @@ func win_lose() {
 		fmt.Println("\nYOU DIED или ВЫ УМЕРЛИ")
 		syscall.Exit(0)
 	}
-	
 }
