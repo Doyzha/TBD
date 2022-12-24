@@ -1,4 +1,4 @@
-module github.com/Doyzha/TBD/tree/console_game-1/RPBD/console_game/functions
+module github.com/Doyzha/TBD/tree/console_game-2/RPBD/console_game/functions
 
 go 1.19
 
