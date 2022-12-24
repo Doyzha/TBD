@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Doyzha/TBD/tree/console_game-1/RPBD/console_game/functions"
+	"github.com/Doyzha/TBD/tree/console_game-2/RPBD/console_game/functions"
 )
 
 func main() {
