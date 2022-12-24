@@ -1,4 +1,4 @@
-module github.com/RyabovNick/databasecourse_p2/golang/tasks/people_service
+module github.com/Doyzha/TBD/tree/people_service/RPBD/people_service
 
 go 1.19
 
