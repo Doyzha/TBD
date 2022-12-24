@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/Doyzha/TBD/tree/console_game-1/RPBD/console_game/functions"
+	"github.com/Doyzha/TBD/tree/console_game-2/RPBD/console_game/functions"
 	"github.com/stretchr/testify/assert"
 )
 
